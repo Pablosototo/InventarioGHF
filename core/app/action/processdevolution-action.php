@@ -2,7 +2,9 @@
 
 if(!empty($_POST)){
 	// print_r($_POST);
+
 	$sell = SellData::getById($_POST["sell_id"]);
+
 	$operations = OperationData::getAllProductsBySellId($sell->id);
 
 	$dev = new SellData();
@@ -11,6 +13,7 @@ if(!empty($_POST)){
 	$dev->user_id = $_SESSION["user_id"];
 	$dev->operation_type_id = 5; // devolution
 	$dev->status=0;
+	$dev->person_id=$_POST["person_id"];
 	$d = $dev->add_de();
 
 
@@ -34,8 +37,8 @@ if(!empty($_POST)){
 				 $dev_op->q= $_POST["op_".$op->id];
 				 $add = $dev_op->add();
 
-//				 $op->q -= $_POST["op_".$op->id];
-//				 $op->update_q();
+			 $op->q -= $_POST["op_".$op->id];
+			 $op->update_q();
 
 				 
 				 /// agregamos la devolucion como un gasto
@@ -53,5 +56,3 @@ if(!empty($_POST)){
 	Core::redir("./?view=dev");
 
 }
-
-?>

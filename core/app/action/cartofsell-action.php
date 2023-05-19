@@ -1,5 +1,5 @@
 <?php
- $symbol = ConfigurationData::getByPreffix("currency")->val;
+$symbol = ConfigurationData::getByPreffix("currency")->val;
 $iva_name = ConfigurationData::getByPreffix("imp-name")->val;
 $iva_val = ConfigurationData::getByPreffix("imp-val")->val;
 ?>
@@ -86,9 +86,16 @@ $price = $product->price_out;
 </table>
 </div>
 
+<br><br>
+<!-- <div>
+							<label class="col-lg-2 control-label">Nota</label>
+							<div class="col-lg-10">
+								<textarea rows="5" cols="50" name="nota"></textarea>
+							</div>
+						</div>-->
 
+</div> 
 
-</div>
 <div class="col-md-4">
 
 
@@ -218,8 +225,8 @@ $clients = FData::getAll();
 
 <div class="col-md-12">
     <div class="">
-    <label class="control-label">Comentarios</label>
-      <textarea name="comment"  placeholder="Comentarios" class="form-control" rows="10"></textarea>
+    <label class="control-label">Nota</label>
+      <textarea name="comment"  placeholder="Notas para esta factura" class="form-control" rows="10"></textarea>
     </div>
   </div>
   </div>
