@@ -54,8 +54,8 @@
 			</div><!-- /.box-header -->
 
 			<form method="post" action="./?action=processdevolution">
-				<input  name="sell_id" value="<?php echo $sell->id; ?>">
-				<input  name="person_id" value="<?php echo $sell->person_id; ?>">
+				<input type="hidden" name="sell_id" value="<?php echo $sell->id; ?>">
+				<input type="hidden" name="person_id" value="<?php echo $sell->person_id; ?>">
 				<table class="table table-bordered table-hover">
 					<thead>
 						<th>Codigo</th>
