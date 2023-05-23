@@ -51,7 +51,7 @@ if(count($products)>0){
 <table class="table table-bordered table-hover table-responsive datatable	">
 	<thead>
 		<th></th>
-		<th>Folio</th>	
+		<th>Factura</th>	
 		<th>Pago</th>
 		<th>Entrega</th>
 		<th>Total</th>
@@ -85,10 +85,10 @@ $total= $sell->total-$sell->discount;
 		<td><?php echo $sell->getStockTo()->name; ?></td>
 		<td><?php echo $sell->created_at; ?></td>
 		<td style="width:130px;">
-		<a  target="_blank" href="ticket.php?id=<?php echo $sell->id; ?>" class="btn btn-xs btn-default"><i class='fa fa-ticket'></i> Ticket</a>
+		<!-- <a  target="_blank" href="ticket.php?id=<?php echo $sell->id; ?>" class="btn btn-xs btn-default"><i class='fa fa-ticket'></i> Ticket</a> -->
 <?php if(isset($_SESSION["user_id"]) && Core::$user->kind==1):?>
 		<a href="index.php?action=cancelsell&id=<?php echo $sell->id; ?>" class="btn btn-xs btn-danger">Cancelar</a>
-		<a href="index.php?view=delsell&id=<?php echo $sell->id; ?>" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i></a>
+		<!-- <a href="index.php?view=delsell&id=<?php echo $sell->id; ?>" class="btn btn-xs btn-danger"><i class="fa fa-trash"></i></a> -->
 <?php endif;?>
 		</td>
 	</tr>

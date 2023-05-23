@@ -65,8 +65,8 @@ class SellData
 
 	public function add_de()
 	{
-		$sql = "insert into " . self::$tablename . " (status,stock_to_id,sell_from_id,user_id,operation_type_id,created_at) ";
-		$sql .= "value (0,$this->stock_to_id,$this->sell_from_id,$this->user_id,5,$this->created_at)";
+		$sql = "insert into " . self::$tablename . " (status,person_id, stock_to_id,sell_from_id,user_id,operation_type_id,created_at) ";
+		$sql .= "value (0,$this->person_id,$this->stock_to_id,$this->sell_from_id,$this->user_id,5,$this->created_at)";
 		return Executor::doit($sql);
 	}
 

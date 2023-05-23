@@ -47,8 +47,8 @@ if(count($products)>0){
 <table class="table table-bordered table-hover table-responsive datatable	">
 	<thead>
 		<th></th>
-		<th>Folio</th>	
-		<th>Total</th>
+		<th>Número</th>	
+		<!-- <th>Total</th> -->
 		<th>Cliente</th>
 		<th>Vendedor</th>
 		<th>Almacen</th>
@@ -63,15 +63,15 @@ if(count($products)>0){
 		<td style="width:30px;">
 		<a href="index.php?view=onedev&id=<?php echo $sell->id; ?>" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-eye-open"></i></a></td>
 		<td>#<?php echo $sell->id; ?></td>
-
+<!-- 
 		<td>
 
 <?php
-$total= $sell->total-$sell->discount;
-		echo "<b>".Core::$symbol." ".number_format($total,2,".",",")."</b>";
+// $total= $sell->total-$sell->discount;
+// 		echo "<b>".Core::$symbol." ".number_format($total,2,".",",")."</b>";
 
 ?>			
-		</td>
+		</td> -->
 	<td> <?php if($sell->person_id!=null){$c= $sell->getPerson();echo $c->name." ".$c->lastname;} ?> </td>
 	<td> <?php if($sell->user_id!=null){$c= $sell->getUser();echo $c->name." ".$c->lastname;} ?> </td>
 		<td><?php echo $sell->getStockTo()->name; ?></td>
