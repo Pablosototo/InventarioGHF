@@ -213,7 +213,7 @@ if( $q==0 ||  $q<=$product->inventary_min){
             <?php if(Core::$user->kind==3):?>
             <li><a href="./?view=inventary&stock=<?php echo StockData::getPrincipal()->id;?>"><i class='fa fa-area-chart'></i> <span>Inventario</span></a></li>
                 <li><a href="./?view=search"><i class='fa fa-search'></i> Buscar Productos</a></li>
-                <li><a href="./index.php?view=dev"><i class='fa fa-retweet'></i> <span>Devolucion</span></a></li>
+                <li><a href="./index.php?view=dev"><i class='fa fa-retweet'></i> <span>Devolución</span></a></li>
           <?php endif; ?>
 
 
@@ -270,7 +270,7 @@ if( $q==0 ||  $q<=$product->inventary_min){
                 <li><a href="./?view=search">Buscar Productos</a></li>
                 <li><a href="./?view=inventaries">Inventario Global</a></li>
                 <li><a href="./?view=selectstock">Traspasar</a></li>
-                <li><a href="./?view=dev">Devolucion</a></li>
+                <li><a href="./?view=dev">Devolución</a></li>
                 <li><a href="./?view=trasps">Traspasos</a></li>
                 <li><a href="./?view=devs">Devoluciones</a></li>
               <?php endif; ?>
@@ -293,10 +293,10 @@ if( $q==0 ||  $q<=$product->inventary_min){
 
 
             <li class="treeview <?php if(isset($_GET["view"]) && ($_GET["view"]=="users"||$_GET["view"]=="settings" ||$_GET["view"]=="import"||$_GET["view"]=="newuser"||$_GET["view"]=="edituser")){ echo "active"; }?>">
-              <a href="#"><i class='fa fa-cog'></i> <span>Administracion</span> <i class="fa fa-angle-left pull-right"></i></a>
+              <a href="#"><i class='fa fa-cog'></i> <span>Administración</span> <i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
                 <li><a href="./?view=users">Usuarios</a></li>
-                <li><a href="./?view=settings">Configuracion</a></li>
+                <li><a href="./?view=settings">Configuración</a></li>
                 <li><a href="./?view=import">Importar Datos</a></li>
 
               </ul>
@@ -330,9 +330,9 @@ if( $q==0 ||  $q<=$product->inventary_min){
 
         <footer class="main-footer">
         <div class="pull-right hidden-xs">
-          <b>Version</b> 1.0
+          <b>Version</b> 1.1
                 </div>
-        <strong>Copyright &copy; 2022 <a href="http://www.sotechcr.com/" target="_blank">Sotech CR</a></strong>
+        <strong>Copyright &copy; 2023 <a href="http://www.sotechcr.com/" target="_blank">Sotech CR</a></strong>
       </footer>
       <?php else:?>
         <?php if(isset($_GET["view"]) && $_GET["view"]=="clientaccess"):?>

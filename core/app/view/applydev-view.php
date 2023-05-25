@@ -22,7 +22,7 @@ foreach ($operations as $op) {
 				 /// agregamos la devolucion como un gasto
 				 	$product = ProductData::getById($op->product_id);
 				 	$user = new SpendData();
-					$user->name = "Devolucion - Venta - ".$sell->id."  - ".$product->name;
+					$user->name = "Devolución - Venta - ".$sell->id."  - ".$product->name;
 					$user->price = $product->price_out*$op->q;
 					$user->add();
 

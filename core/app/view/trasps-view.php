@@ -124,7 +124,7 @@
 			?>
 				<div class="jumbotron">
 					<h2>No hay Traspasos</h2>
-					<p>No se ha realizado ninguna devolucion.</p>
+					<p>No se ha realizado ninguna devolución.</p>
 				</div>
 			<?php
 			}

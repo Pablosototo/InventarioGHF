@@ -52,7 +52,7 @@ if(!empty($_POST)){
 		}
 
 	}
-	Core::alert("Devolucion agregada!");
+	Core::alert("Devolución agregada!");
 	Core::redir("./?view=dev");
 
 }
