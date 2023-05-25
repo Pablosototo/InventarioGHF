@@ -92,7 +92,7 @@ $total= $sell->total-$sell->discount;
 	?>
 	<div class="jumbotron">
 		<h2>No hay Devoluciones Pendientes</h2>
-		<p>No se ha realizado ninguna devolucion.</p>
+		<p>No se ha realizado ninguna devolución.</p>
 	</div>
 	<?php
 }

@@ -99,7 +99,7 @@ if(count($products)>0){
 	?>
 	<div class="jumbotron">
 		<h2>No hay Devoluciones</h2>
-		<p>No se ha realizado ninguna devolucion.</p>
+		<p>No se ha realizado ninguna devolución.</p>
 	</div>
 	<?php
 }
