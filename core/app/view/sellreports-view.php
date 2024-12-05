@@ -109,7 +109,7 @@ $supertotal+= ($operation->total-$operation->discount);
 <?php if(isset($_GET["user_id"]) && $_GET["user_id"]!=""):
 $uy = UserData::getById($_GET["user_id"]);
 ?>
-<h1>Comision (<?php echo $uy->comision; ?>%): <?php echo Core::$symbol; ?> <?php echo number_format($supertotal*($uy->comision/100),2,'.',','); ?></h1>
+<!--- <h1>Comision (<//?php echo $uy->comision; ?>%): <//?php echo Core::$symbol; ?> <//?php echo number_format($supertotal*($uy->comision/100),2,'.',','); ?></h1>-->
 
 <?php endif; ?>
 <script type="text/javascript">

@@ -4,7 +4,7 @@ class Database {
 	public static $con;
 	function Database(){
 		//prueba es el de PRD
-		$this->user="Pablo";$this->pass="Noeli@.110217";$this->host="localhost";$this->ddbb="pruebasghf";
+		$this->user="Pablo";$this->pass="Noeli@.110217";$this->host="localhost";$this->ddbb="prueba";
 		//$this->user="evilnaps_admin";$this->pass="l00lapal00za";$this->host="localhost";$this->ddbb="evilnaps_pvm";
 	}
 

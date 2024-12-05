@@ -262,7 +262,7 @@ $stock = StockData::getById($sell->stock_to_id);
 
                       <div class="col-md-12">
                         <div class="">
-                          <label class="control-label">Comentarios</label>
+                          <label class="control-label">Comentarios</label><span class="warning-message">Utilizar únicamente 1 línea de texto para el comentario</span>
                           <textarea name="comment" placeholder="Comentarios" class="form-control" rows="10"><?php echo $sell->comment; ?></textarea>
                         </div>
                       </div>
@@ -274,9 +274,6 @@ $stock = StockData::getById($sell->stock_to_id);
               </div>
             </div>
           </div>
-
-
-
 
           <input type="hidden" name="id" value="<?php echo $sell->id; ?>">
           <div class="row">
@@ -294,6 +291,14 @@ $stock = StockData::getById($sell->stock_to_id);
         </form>
       </div>
     </div>
+
+    <style>
+  .warning-message {
+    color: red;
+    font-size: 0.9em; /* Ajusta el tamaño si es necesario */
+    margin-left: 5px; /* Espacio entre el punto y el texto */
+  }
+</style>
 
     <script type="text/javascript">
       function thePDF() {
@@ -597,7 +602,7 @@ $stock = StockData::getById($sell->stock_to_id);
             }
           } );
           
-          doc.text("Nota: <?php echo $sell->comment; ?>", 40 , doc.autoTableEndPosY()+25);
+          doc.text("Nota: <?php echo $sell->comment; ?>", 40 , doc.autoTableEndPosY()+25, null, null);
           
           //doc.setFontsize
           //img = new Image();

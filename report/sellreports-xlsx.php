@@ -30,10 +30,10 @@ if($_GET["client_id"]==""){
 			} 
 
 // Set document properties
-$objPHPExcel->getProperties()->setCreator("Inventio Max v3.1")
-							 ->setLastModifiedBy("Inventio Max v3.1")
-							 ->setTitle("Inventio Max v3.1")
-							 ->setSubject("Inventio Max v3.1")
+$objPHPExcel->getProperties()->setCreator("Grupo Hung Fung")
+							 ->setLastModifiedBy("Grupo Hung Fung")
+							 ->setTitle("Grupo Hung Fung")
+							 ->setSubject("Grupo Hung Fung")
 							 ->setDescription("")
 							 ->setKeywords("")
 							 ->setCategory("");
@@ -42,20 +42,29 @@ $objPHPExcel->getProperties()->setCreator("Inventio Max v3.1")
 // Add some data
 $sheet = $objPHPExcel->setActiveSheetIndex(0);
 
-$sheet->setCellValue('A1', 'Reporte de Ventas - Inventio Max')
+$sheet->setCellValue('A1', 'Reporte de Ventas - Grupo Hung Fung')
 ->setCellValue('A2', 'Id')
 ->setCellValue('B2', 'Pago')
 ->setCellValue('C2', 'Entrega')
 ->setCellValue('D2', 'Total')
-->setCellValue('E2', 'Fecha');
+->setCellValue('E2', 'Cliente') // Nueva columna para el cliente
+->setCellValue('F2', 'Fecha'); // Cambiar la columna de fecha a F;
 
 $start = 3;
 foreach($products as $product){
+
+	$cliente = '';
+    if ($product->person_id != null) {
+        $person = $product->getPerson(); // Obtener el cliente asociado
+        $cliente = $person->name; // Nombre completo del cliente
+    }
+
 $sheet->setCellValue('A'.$start, $product->id)
 ->setCellValue('B'.$start, $product->getP()->name)
 ->setCellValue('C'.$start, $product->getD()->name)
 ->setCellValue('D'.$start, $symbol." ".($product->total-$product->discount))
-->setCellValue('E'.$start, $product->created_at);
+->setCellValue('E' . $start, $cliente) // Insertar el nombre del cliente
+->setCellValue('F'.$start, $product->created_at);
 $start++;
 }
 

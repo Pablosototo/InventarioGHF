@@ -1,5 +1,7 @@
 <?php
 
+require_once 'PersonData.php';
+
 class SellData
 {
 	public static $tablename = "sell";

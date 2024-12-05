@@ -55,17 +55,35 @@ $product = ProductData::getById($p["product_id"]);
 <div class="box box-primary">
 <table class="table table-bordered">
 <tr>
-	<td><p>Subtotal</p></td>
-	<td><p><b><?php echo Core::$symbol; ?> <?php echo number_format($total/(1 + ($iva_val/100) ),2,'.',','); ?></b></p></td>
-</tr>
-<tr>
-	<td><p><?php echo $iva_name." (".$iva_val."%) ";?></p></td>
-	<td><p><b><?php echo Core::$symbol; ?> <?php echo number_format(($total/(1 + ($iva_val/100) ))*($iva_val/100),2,'.',','); ?></b></p></td>
-</tr>
-<tr>
-	<td><p>Total</p></td>
-	<td><p><b><?php echo Core::$symbol; ?> <?php echo number_format($total,2,'.',','); ?></b></p></td>
-</tr>
+										<td>
+											<p>Subtotal</p>
+										</td>
+										<td>
+										<p><b><?php echo Core::$symbol; ?> <?php echo number_format($total, 2, '.', ','); ?></b></p>
+											<!--<p><b><?php echo Core::$symbol; ?> <?php echo number_format($total * (1 - ($iva_val / 100)), 2, '.', ','); ?></b></p>-->
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<p><?php echo $iva_name . " (" . $iva_val . "%) "; ?></p>
+										</td>
+										<td>
+
+											<!--<p><b><?php echo Core::$symbol; ?> <?php echo number_format($total * ($iva_val / 100), 2, '.', ','); ?></b></p>-->
+											<p><b><?php echo Core::$symbol; ?> <?php echo number_format($total * ($iva_val / 100),2,'.', ','); ?></b></p>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<p>Total</p>
+										</td>
+										<td>
+
+										<!--<p><b><?php echo Core::$symbol; ?> <?php echo number_format($total + ($total * ($iva_val / 100)), 2, '.', ','); ?></b></p>-->
+
+											<p><b><?php echo Core::$symbol; ?> <?php echo number_format($total + ($total * ($iva_val / 100)), 2, '.', ','); ?></b></p>
+										</td>
+									</tr>
 
 </table>
 </div>

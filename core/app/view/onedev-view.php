@@ -16,6 +16,7 @@ $company_name = ConfigurationData::getByPreffix("company_name")->val;
       <li><a onclick="thePDF()" id="makepdf" class=""><i class="fa fa-download"></i> Descargar PDF</a>
     </ul>
   </div>
+  
   <h1>Resumen de Devolución</h1>
   <?php if (isset($_GET["id"]) && $_GET["id"] != "") : ?>
     <?php
